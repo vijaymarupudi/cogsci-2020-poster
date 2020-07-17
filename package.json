@@ -1,0 +1,18 @@
+{
+  "name": "poster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rollup.config.js",
+  "dependencies": {
+    "mithril": "^2.0.4",
+    "rollup": "^2.21.0",
+    "rollup-plugin-postcss": "^3.1.3",
+    "tachyons": "^4.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

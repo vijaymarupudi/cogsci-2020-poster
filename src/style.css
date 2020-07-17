@@ -1,0 +1,43 @@
+.bg-umn-maroon {
+  background-color: #7a0019;
+}
+
+.umn-maroon {
+  color: #7a0019;
+}
+
+.umn-gold {
+  color: #ffcc33;
+}
+
+.bg-umn-gold {
+  background-color: #ffcc33;
+}
+
+body {
+  font-family: 'Inter';
+  color: rgb(42, 47, 69);
+}
+
+
+.linked-content a {
+  text-decoration: underline;
+  color: rgb(42, 47, 69);
+  text-decoration-color: rgba(42, 47, 69, 0.3);
+}
+
+.linked-content a:hover {
+  color: black;
+  text-decoration-color: black;
+}
+
+
+.clustering-canvas {
+  border: 1px solid black;
+}
+
+.single-cluster-warning {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
