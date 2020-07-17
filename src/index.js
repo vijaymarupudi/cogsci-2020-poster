@@ -272,10 +272,20 @@ const Col2 = fn(() =>
   ])
 );
 
+const Questions = fn(() => {
+  return m(
+    "div.linked-content",
+    m.trust(
+      "Email <a href='https://vijaymarupudi.com'>Vijay Marupudi</a> at <code class='bg-black-10 ph2 br2'>vijaymarupudi[at]gatech[dot]edu</code>, live chat, or request a video call!"
+    )
+  );
+});
+
 const Col3 = fn(() =>
   m("div.w-third-l.fl", [
     m(Section, { heading: "Results" }, m(Results)),
-    m(Section, { heading: "Discussion" }, m(Discussion))
+    m(Section, { heading: "Discussion" }, m(Discussion)),
+    m(Section, { heading: "Questions?" }, m(Questions))
   ])
 );
 
