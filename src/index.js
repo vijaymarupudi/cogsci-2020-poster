@@ -140,7 +140,7 @@ const Methods = fn(() => {
 
 const ClusterImage = fn(({ title, src }) =>
   m(
-    "figure.flex.content-center.items-center.flex-column.shadow-1.ma2.pa2",
+    "figure.flex.content-center.items-center.flex-column.ba.br2.b--black-20.ma2.pa2",
     m("img", { src }),
     m("figcaption", title)
   )
