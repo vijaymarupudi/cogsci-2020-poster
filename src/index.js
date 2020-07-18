@@ -241,11 +241,11 @@ const Results = fn(() =>
   ])
 );
 
-const Discussion = fn(() => {
+const Summary = fn(() => {
   return m.trust(`
 <ul>
-  <li>
-    High reliability suggests that clustering is a stable ability, and thus
+  <li class="f4 f2-l lh-title">
+    High reliability suggests that <strong>clustering is a stable ability</strong>, and thus
     potentially a solid foundation for human TSP strategies.
   </li>
   <li>
@@ -255,6 +255,8 @@ const Discussion = fn(() => {
 </ul>
   `);
 });
+
+const Design = fn(() => m.trust(`<strong>Structure</strong> x <strong>Orientation</strong> x <strong># points</strong>`))
 
 const Col1 = fn(() =>
   m("div.w-third-l.fl", [
@@ -267,6 +269,7 @@ const Col1 = fn(() =>
 const Col2 = fn(() =>
   m("div.w-third-l.fl", [
     m(Section, { heading: "Materials" }, m(Materials)),
+    m(Section, { heading: "Design" }, m(Design)),
     m(Section, { heading: "Fowlkes-Mallows Index" }, m(FowlkesMallows)),
     m(Section, { heading: "Data Analysis" }, m(DataAnalysis))
   ])
@@ -284,7 +287,7 @@ const Questions = fn(() => {
 const Col3 = fn(() =>
   m("div.w-third-l.fl", [
     m(Section, { heading: "Results" }, m(Results)),
-    m(Section, { heading: "Discussion" }, m(Discussion)),
+    m(Section, { heading: "Summary" }, m(Summary)),
     m(Section, { heading: "Questions?" }, m(Questions))
   ])
 );
