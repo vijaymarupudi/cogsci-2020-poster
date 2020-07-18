@@ -16,7 +16,7 @@ const Header = fn(() => {
         m(
           "p.f4-l",
           m.trust(
-            "Vijay&nbsp;Marupudi, V.N.V.&nbsp;Vimal&nbsp;Rao, Jimin&nbsp;Park, Rina&nbsp;M.&nbsp;Harsch, Jeffrey&nbsp;K.&nbsp;Bye, & Sashank&nbsp;Varma"
+            "Vijay&nbsp;Marupudi, V.N.&nbsp;Vimal&nbsp;Rao, Jimin&nbsp;Park, Rina&nbsp;M.&nbsp;Harsch, Jeffrey&nbsp;K.&nbsp;Bye, & Sashank&nbsp;Varma"
           )
         )
       ]),
@@ -151,7 +151,7 @@ const ClusterImageContainer = fn(({ children }) => m("div.flex-l", children));
 const Materials = fn(() => {
   return m("div", [
     m("h4.tc", "Dot clouds (n=112)"),
-    m("h5.tc", "Clustered / Disperse"),
+    m("h5.tc", "Structure: Clustered / Disperse"),
     m(ClusterImageContainer, [
       m(
         "div",
@@ -164,7 +164,7 @@ const Materials = fn(() => {
     ]),
     m(
       "h5.tc",
-      "Same / Flipped",
+      "Orientation: Same / Flipped",
       " ",
       m("small.o-20", "for second presentation")
     ),
