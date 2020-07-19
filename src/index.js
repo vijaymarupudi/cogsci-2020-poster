@@ -11,7 +11,7 @@ const Header = fn(() => {
       m("div.mr3", [
         m(
           "h1.ttl.tracked-tight",
-          "Human reliability of the traveling salesman problem."
+          "Clustering as a precursor to efficient and near-optimal solution of small instances of the Traveling Salesperson Problem."
         ),
         m(
           "p.f4-l",
