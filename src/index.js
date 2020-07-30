@@ -292,6 +292,7 @@ const Questions = fn(() => {
       <p>I will be online on live chat and my Zoom room from now until 1:00pm EST! (30th July, 2020)</p>
       <ul>
         <li><a href="https://umn.zoom.us/j/5178764162">Join my Zoom Room</a></li>
+        <li><a href="https://twitter.com/vijaymarupudi">Tweet or DM me @vijaymarupudi</a></li>
         <li>Live chat me!</li>
         <li>Email <a href='https://vijaymarupudi.com'>Vijay Marupudi</a> at <code class='bg-black-10 ph2 br2'>vijaymarupudi@gatech.edu</code></li>
       </ul>
