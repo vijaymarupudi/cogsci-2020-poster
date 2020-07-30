@@ -3,7 +3,9 @@ import { clusteringDemo } from "./clustering-demo";
 import "tachyons/css/tachyons.min.css";
 import "./style.css";
 
-const fn = func => ({ view: v => func({ ...v.attrs, children: v.children }) });
+const fn = (func) => ({
+  view: (v) => func({ ...v.attrs, children: v.children }),
+});
 
 const Header = fn(() => {
   return m("div.pa3.bg-umn-maroon.umn-gold", [
@@ -18,10 +20,10 @@ const Header = fn(() => {
           m.trust(
             "Vijay&nbsp;Marupudi, V.N.&nbsp;Vimal&nbsp;Rao, Jimin&nbsp;Park, Rina&nbsp;M.&nbsp;Harsch, Jeffrey&nbsp;K.&nbsp;Bye, & Sashank&nbsp;Varma"
           )
-        )
+        ),
       ]),
-      m("img.h3.h4-l", { src: "umn.png" })
-    ])
+      m("img.h3.h4-l", { src: "umn.png" }),
+    ]),
   ]);
 });
 
@@ -43,7 +45,7 @@ const TSPBackground = fn(() => {
           "a",
           {
             href:
-              "https://simple.wikipedia.org/wiki/Travelling_salesman_problem#Stating_the_problem"
+              "https://simple.wikipedia.org/wiki/Travelling_salesman_problem#Stating_the_problem",
           },
           "Involves creating a tour which connects a set of cities while visiting each city exactly once."
         )
@@ -75,7 +77,7 @@ const TSPBackground = fn(() => {
           { href: "https://doi.org/10.3758/BF03196857" },
           "It has been proposed that humans are guided by the external boundary of the cities (convex hull), but this strategy does not have a linear time complexity."
         )
-      )
+      ),
     ]),
     m("h3", "Hypothesis"),
     m("ul", [
@@ -90,8 +92,8 @@ const TSPBackground = fn(() => {
       m(
         "li",
         "This strategy could enable near-optimal, linear-time performance."
-      )
-    ])
+      ),
+    ]),
   ]);
 });
 
@@ -101,7 +103,10 @@ const ResearchQuestion = fn(() => {
     m("ul.list.pl0", [
       m("li.fw8.f4", "Is human clustering reliable to support this strategy?"),
       m("li.o-50", "Is human TSP performance reliable?"),
-      m("li.o-50", "Do people’s clusters predict their TSP performance / path?")
+      m(
+        "li.o-50",
+        "Do people’s clusters predict their TSP performance / path?"
+      ),
     ])
   );
 });
@@ -111,16 +116,16 @@ const Methods = fn(() => {
     ["Participants", "N = 47"],
     [
       "Procedure",
-      "Participants clustered 112 dot clouds at a computer using a mouse."
+      "Participants clustered 112 dot clouds at a computer using a mouse.",
     ],
     [
       "Measures",
       [
         "Number of clusters, cluster point membership, ",
         m("strong", "calculated Fowlkes-Mallows index"),
-        ", time to complete clustering."
-      ]
-    ]
+        ", time to complete clustering.",
+      ],
+    ],
   ];
 
   return m.fragment(null, [
@@ -134,7 +139,7 @@ const Methods = fn(() => {
     ),
     ...content.map(([key, value]) =>
       m("p", [m("strong", key), ": ", m("span", value)])
-    )
+    ),
   ]);
 });
 
@@ -160,7 +165,7 @@ const Materials = fn(() => {
       m(
         "div",
         m(ClusterImage, { src: "disperse.png", title: "Disperse stimulus" })
-      )
+      ),
     ]),
     m(
       "h5.tc",
@@ -173,8 +178,8 @@ const Materials = fn(() => {
       m(
         "div",
         m(ClusterImage, { src: "flipped.png", title: "Flipped orientation" })
-      )
-    ])
+      ),
+    ]),
   ]);
 });
 
@@ -188,7 +193,7 @@ const FowlkesMallows = fn(() => {
         { href: "https://en.wikipedia.org/wiki/Fowlkes%E2%80%93Mallows_index" },
         "A measure of reliability ranging from 0 to 1."
       )
-    )
+    ),
   ]);
 });
 
@@ -209,7 +214,7 @@ const DataAnalysis = fn(() => {
 </ul>
 <p><strong>Random Effects</strong>: Participant, Stimulus</p>
       `)
-    )
+    ),
   ]);
 });
 
@@ -237,7 +242,7 @@ const Results = fn(() =>
     reliability (<em>B</em> = -0.002, <em>p</em> < 0.05)
   </li>
 </ul>
-`)
+`),
   ])
 );
 
@@ -256,13 +261,17 @@ const Summary = fn(() => {
   `);
 });
 
-const Design = fn(() => m.trust(`<strong>Structure</strong> x <strong>Orientation</strong> x <strong># points</strong>`))
+const Design = fn(() =>
+  m.trust(
+    `<strong>Structure</strong> x <strong>Orientation</strong> x <strong># points</strong>`
+  )
+);
 
 const Col1 = fn(() =>
   m("div.w-third-l.fl", [
     m(Section, { heading: "background" }, m(TSPBackground)),
     m(Section, { heading: "Research Question" }, m(ResearchQuestion)),
-    m(Section, { heading: "Methods" }, m(Methods))
+    m(Section, { heading: "Methods" }, m(Methods)),
   ])
 );
 
@@ -271,7 +280,7 @@ const Col2 = fn(() =>
     m(Section, { heading: "Materials" }, m(Materials)),
     m(Section, { heading: "Design" }, m(Design)),
     m(Section, { heading: "Fowlkes-Mallows Index" }, m(FowlkesMallows)),
-    m(Section, { heading: "Data Analysis" }, m(DataAnalysis))
+    m(Section, { heading: "Data Analysis" }, m(DataAnalysis)),
   ])
 );
 
@@ -279,7 +288,14 @@ const Questions = fn(() => {
   return m(
     "div.linked-content",
     m.trust(
-      "Email <a href='https://vijaymarupudi.com'>Vijay Marupudi</a> at <code class='bg-black-10 ph2 br2'>vijaymarupudi[at]gatech[dot]edu</code>, live chat, or request a video call!"
+      `
+      <p>I will be online on live chat and my Zoom room from now until 1:00pm EST! (30th July, 2020)</p>
+      <ul>
+        <li><a href="https://umn.zoom.us/j/5178764162">Join my Zoom Room</a></li>
+        <li>Live chat me!</li>
+        <li>Email <a href='https://vijaymarupudi.com'>Vijay Marupudi</a> at <code class='bg-black-10 ph2 br2'>vijaymarupudi@gatech.edu</code></li>
+      </ul>
+      `
     )
   );
 });
@@ -288,14 +304,18 @@ const Col3 = fn(() =>
   m("div.w-third-l.fl", [
     m(Section, { heading: "Results" }, m(Results)),
     m(Section, { heading: "Summary" }, m(Summary)),
-    m(Section, { heading: "Questions?" }, m(Questions))
+    m(
+      Section,
+      { heading: "Questions, thoughts, or want more information?" },
+      m(Questions)
+    ),
   ])
 );
 
 const App = {
   view() {
     return m("div", [m(Header), m("div.cf", [m(Col1), m(Col2), m(Col3)])]);
-  }
+  },
 };
 
 m.mount(document.body, App);
